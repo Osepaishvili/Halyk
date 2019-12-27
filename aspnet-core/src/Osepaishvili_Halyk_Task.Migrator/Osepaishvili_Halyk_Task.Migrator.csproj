@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>Osepaishvili_Halyk_Task.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Osepaishvili_Halyk_Task.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="4.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Osepaishvili_Halyk_Task.Core\Osepaishvili_Halyk_Task.Core.csproj" />
+    <ProjectReference Include="..\Osepaishvili_Halyk_Task.EntityFrameworkCore\Osepaishvili_Halyk_Task.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
